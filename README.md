@@ -6,7 +6,7 @@ fjladjfldas
 The cmrf package provides a python implementation of our winning solution [1] for the [MSR-Bing Image Retrieval Challenge](http://research.microsoft.com/en-US/projects/irc/) in conjunction with ACM Multimedia 2015.
 * four individual methods (i.e. image2text, text2image, text2image as Parzen window and semantic embedding),
 * learning optimized weights for relevance fusion,
-* cross-platform support (linux, mac, windows).
+* cross-platform supportoiuoiu (linux, mac, windows).
 
 
 ### Dependency
