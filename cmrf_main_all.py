@@ -5,7 +5,7 @@ import collections
 
 from image2text import Image2Text
 from text2image import Text2Image
-from semantic_embedding import SemanticEmbedding
+from conse import ConSE
 
 from util.queryParser import SimpleQueryParser
 from util.tools import readQidQuery, writeRankingResult, writeDCGResult
@@ -69,7 +69,7 @@ def process(options, trainCollection, devCollection):
 
     # method selection
     if method =='conse':
-        se_searcher = SemanticEmbedding(label_source, corpus, word2vec_model, dev_feat_path, rootpath)
+        se_searcher = ConSE(label_source, corpus, word2vec_model, dev_feat_path, rootpath)
 
     elif method == 't2i' or method == 'ta':
         nnquery_file = os.path.join(rootpath, devCollection, 'TextData','querynn', options.nnqueryfile)

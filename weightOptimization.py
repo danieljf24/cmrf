@@ -77,14 +77,16 @@ def eval_file(data, weights, file_name):
     fout.close()
     
                 
-def coordinate_ascent(data):
+def coordinate_ascent(data, sigma=0.01):
     feat_dim = data[0][-1].shape[1]
     alpha = [1.0/feat_dim] * feat_dim
+    average_alpha = alpha
     changed = [1] * feat_dim
     #random.seed()
     #activeIndex = random.randint(0, feat_dim-1)
     activeIndex = feat_dim-1
     
+    counter = 0
     while sum(changed) > 0:
         activeIndex = (activeIndex+1)% feat_dim
         max_obj = eval(data, alpha)
@@ -107,8 +109,11 @@ def coordinate_ascent(data):
                 temp_alpha[activeIndex] += delta
                 obj = eval(data, temp_alpha)
 
-                if max_obj < obj:
-                    max_obj = obj
+                penalty = np.sum((np.array(temp_alpha) - np.array(average_alpha))*2)
+                obj_penalty = obj - sigma*(penalty)
+
+                if max_obj < obj_penalty:
+                    max_obj = obj_penalty
                     best_weight = alpha[activeIndex] + delta
                 step /= 2                
         if abs(obj_0-max_obj)>EPSILON:
@@ -120,6 +125,10 @@ def coordinate_ascent(data):
         else:
             print 'alpha[%2d]=%.4f unchanged, obj (%.6f -> %.6f)' % (activeIndex, alpha[activeIndex], obj_0, max_obj)            
             changed[activeIndex] = 0 
+
+        counter += 1
+        if counter > 300:
+            break
 
     return max_obj, alpha
                 
@@ -181,9 +190,10 @@ def process(options):
     best_perf = -10
     best_alpha = None
     
+    sigma = 0.001
     data = load_data(os.path.join('result', inputeFile))
     for i in range(1):
-        perf, alpha = coordinate_ascent(data)
+        perf, alpha = coordinate_ascent(data, sigma)
         if perf > best_perf:
             best_perf = perf
             best_alpha = alpha
