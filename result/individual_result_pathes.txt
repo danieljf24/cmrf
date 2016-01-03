@@ -1,0 +1,10 @@
+/home/b/VisualSearch1/msr2013dev/SimilarityIndex/msr2013dev/MetaData/conse/ruccaffeprob.imagenet
+/home/b/VisualSearch1/msr2013dev/SimilarityIndex/msr2013dev/MetaData/conse/ruccaffeprob.imagenet
+/home/b/VisualSearch1/msr2013dev/SimilarityIndex/msr2013dev/MetaData/conse/ruccaffeprob.imagenet
+/home/b/VisualSearch1/msr2013dev/SimilarityIndex/msr2013dev/MetaData/ia/ruccaffefc7.imagenet
+/home/b/VisualSearch1/msr2013dev/SimilarityIndex/msr2013dev/MetaData/conse/ruccaffeprob.imagenet
+/home/b/VisualSearch1/msr2013dev/SimilarityIndex/msr2013dev/MetaData/ia/ruccaffefc7.imagenet
+/home/b/VisualSearch1/msr2013dev/SimilarityIndex/msr2013dev/MetaData/ta/ruccaffefc7.imagenet
+/home/b/VisualSearch1/msr2013dev/SimilarityIndex/msr2013dev/MetaData/conse/ruccaffeprob.imagenet
+/home/b/VisualSearch1/msr2013dev/SimilarityIndex/msr2013dev/MetaData/devise/ruccaffefc7.imagenet
+/home/b/VisualSearch1/msr2013dev/SimilarityIndex/msr2013dev/MetaData/psi/ruccaffefc7.imagenet
