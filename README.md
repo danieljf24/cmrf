@@ -2,9 +2,9 @@
 
 
 The cmrf package provides a python implementation of our winning solution [1] for the [MSR-Bing Image Retrieval Challenge](http://research.microsoft.com/en-US/projects/irc/) in conjunction with ACM Multimedia 2015.
-* six individual methods (i.e. Image2text, Text2image, PSI, DeViSE, ConSE and Parzen window),
-* learning optimized weights for relevance fusion,
-* cross-platform support (linux, mac, windows).
+* Six individual methods (i.e. Image2text, Text2image, PSI, DeViSE, ConSE and Parzen window),
+* Learning optimized weights for relevance fusion,
+* Cross-platform support (linux, mac, windows).
 
 
 ### Dependency
@@ -24,7 +24,7 @@ In order to generate cross-media relevance, image and query have to be represent
 #####Individual training methods
 * [PSI](model/psi_model.py):  utilize stochastic gradient descent with mini-batches to minimize the margin ranking loss.
 * [DeViSE](model/devise_model.py):  utilize stochastic gradient descent with mini-batches to minimize the margin ranking loss.
-* other methods have no training process.
+* Other methods have no training process.
 
 #####Individual test methods
 * [Image2text](image2text.py): project image into Bag-of-Words space.
@@ -35,8 +35,8 @@ In order to generate cross-media relevance, image and query have to be represent
 * [Parzen window](parzenWindow.py): an extreme case of text2image.
 
 #####Relevance fusion
-* [weight optimization](weightOptimization.py): employ Coordinate Ascent to learn optimized weights
-* [relevance fusion](relevanceFusion.py): fuse relevance from different methods with optimized weights.
+* [Weight optimization](weightOptimization.py): employ Coordinate Ascent to learn optimized weights
+* [Relevance fusion](relevanceFusion.py): fuse relevance from different methods with optimized weights.
 
 
 
