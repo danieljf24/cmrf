@@ -22,8 +22,8 @@ In order to generate cross-media relevance, image and query have to be represent
 
 
 #####Individual training methods
-* [PSI](model/psi_model.py):  utilize stochastic gradient descent with mini-batches to minimize the margin ranking loss.
-* [DeViSE](model/devise_model.py):  utilize stochastic gradient descent with mini-batches to minimize the margin ranking loss.
+* [PSI](model/psi_model.py):  utilize stochastic gradient descent with mini-batches to minimize the margin ranking loss of PSI model.
+* [DeViSE](model/devise_model.py):  utilize stochastic gradient descent with mini-batches to minimize the margin ranking loss of DeVise model.
 * Other methods have no training process.
 
 #####Individual test methods
