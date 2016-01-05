@@ -22,25 +22,26 @@ def merge_single_chars(query):
     return res    
 
 def remove_meaningless_words(query):
+    query = query.strip()
     res = re.sub(r"^ *images?( +of *)? +",' ',query)
-    res = re.sub(r" +images?( +of *)? +",' ',res)
     res = re.sub(r" +images?( +of *)?$",' ',res)
+    res = re.sub(r" +images?( +of *)? +",' ',res)
     res = re.sub(r"^ *photos?( +of *)? +",' ',res)
-    res = re.sub(r" +photos?( +of *)? +",' ',res)
     res = re.sub(r" +photos?( +of *)?$",' ',res)
+    res = re.sub(r" +photos?( +of *)? +",' ',res)
     res = re.sub(r"^ *pictures?( +of *)? +",' ',res)
-    res = re.sub(r" +pictures?( +of *)? +",' ',res)
     res = re.sub(r" +pictures?( +of *)?$",' ',res)
+    res = re.sub(r" +pictures?( +of *)? +",' ',res)
     res = re.sub(r"^ *pics?( +of +)? +",' ',res)
-    res = re.sub(r" +pics?( +of *)? +",' ',res)
     res = re.sub(r" +pics?( +of *)?$",' ',res)
+    res = re.sub(r" +pics?( +of *)? +",' ',res)
     res = re.sub(r"^ *an? +",' ',res)
     res = re.sub(r" +an? *$",' ',res)
     res = re.sub(r" +an? +",' ',res)
     #res = re.sub(r" *the +",'',res)
     #res = re.sub(r" +the *",'',res)
 
-    return res
+    return res.strip()
 
 
 class QueryParser:
@@ -85,7 +86,7 @@ if __name__ == '__main__':
     queries = ['this u"s', "picture of a dog", "dogs images", 'DoGs', 'jessie "t  v" show house', 'tokyo "   h o t"',
                'images of "3 d" figures', 'drawing "3 dimensional" shapes,', 'thing 1 "t shirt"', '"u s" army', 
                '"U s A " army',' "U   s    A" army', 'pictures of cats', 'cats images', 'image of DoGs', 'a dog', 
-               'the dog','pic of obama','  a dog', 'a dog', 'he is an girl', 'nishi  a  ', 'fda an']  
+               'the dog','pic of obama','  a dog', 'a dog', 'he is an girl', 'image of nishi  a  ', 'fda an', 'a pic of', 'olpicjfdjanimage pic ']  
     qp = SimpleQueryParser()
     
     for query in queries:
