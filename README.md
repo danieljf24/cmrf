@@ -8,10 +8,8 @@ The cmrf package provides a python implementation of our winning solution [1] fo
 
 
 ### Dependency
-* Install [Theano](http://deeplearning.net/software/theano/install.html#install) >= 0.7.0 if you would like to run PSI and DeViSE
-* Download [data](http://www.mmc.ruc.edu.cn/research/irc2015/data/data_for_cmrf.tar.gz) of trained PSI, DeVise models and extract into the cmrf directory.
-* Download [dataset](http://www.mmc.ruc.edu.cn/research/irc2015/data/rucmmc_irc2015_data.tar.gz) without image visual feature.
-* Download image visual feature [ [required (4.7GB)](http://www.mmc.ruc.edu.cn/research/irc2015/data/rucmmc_irc2015_required_feature.tar.gz) | [optional (7.4GB)](http://www.mmc.ruc.edu.cn/research/irc2015/data/rucmmc_irc2015_optional_feature.tar.gz) ].
+* Download [dataset](http://lixirong.net/data/mm2015/rucmmc_irc2015_data.tar.gz) without image visual feature.
+* Download image visual feature [ [required (5.0GB)](http://lixirong.net/data/mm2015/rucmmc_irc2015_required_feature.tar.gz) | [optional (7.9GB)](http://lixirong.net/data/mm2015/rucmmc_irc2015_optional_feature.tar.gz) ].
 * Add [simpleknn](simpleknn) to `PYTHONPATH`.
 * Change `ROOT_PATH` in [basic/common.py](basic/common.py) to local folder where dataset are stored in.
 
